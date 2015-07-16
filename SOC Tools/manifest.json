@@ -1,0 +1,19 @@
+{
+  "name": "SOC Tools",
+  "description": "A tool that helps automating tasks performed by SOC to identify malicious IP/email/domain/files.",
+  "version": "1.0",
+  "background": { "scripts": ["popup.js"] },
+  "browser_action": {
+  		"default_icon": "extras/SOC_icon.png",
+      	"default_title": "Click to open SOC Tools"
+  },
+  "manifest_version": 2, 
+  "permissions": [
+	"activeTab", "tabs", "*://*/*"
+  ], 
+  "options_page": "popup.html", 
+  "content_scripts":[{
+	"js":["extras/jquery-2.1.4.min.js", "contentscript.js", "contentscripthash.js"],
+	"matches": ["*://*/"]
+  }]
+}

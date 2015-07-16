@@ -1,0 +1,118 @@
+<!--------
+Author: Haina Li
+University of Virginia 
+--------->
+
+<!doctype html>
+
+<html>
+  <head>
+    <title>Quick Access to OSINT Tools</title>
+
+    <style>
+		body {
+
+			text-align: center;
+
+		}
+
+		#status {
+			/* avoid an excessively wide status text */
+			width: 500px;
+			height: 400px;
+
+		}
+		
+		#left{
+
+			position: absolute;
+			left: 55%;			
+
+		}
+		#right{
+
+			position: absolute;
+			right: 55%;			
+
+		}
+
+
+
+	</style>
+	<script src="popup.js"></script>
+	<script src="extras/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="extras/bootstrap.min.css">
+    <h3 id="popuptitle">OSINT Lookups</h2>
+  </head>
+  
+  <body>
+	<h5 class="text-center" id="quicklinkstitle">Quick Links</h3>
+	<button type="button" class="btn btn-default" id="virustotal">VirusTotal</button>
+	<button type="button" class="btn btn-default" id="brightcloud">BrightCloud</button>
+	<button type="button" class="btn btn-default" id="urlvoid">URLVoid</button>
+	<br>
+	<button type="button" class="btn btn-default" id="robtex">Robtex</button>
+	<button type="button" class="btn btn-default" id="hybridanalysis">Hybrid-Analysis</button>
+	<button type="button" class="btn btn-default" id="mxtoolbox">mxToolBox</button>
+	<br>
+	<button type="button" class="btn btn-default" id="domaintools">DomainTools</button>
+	<button type="button" class="btn btn-default" id="centralops">CentralOps</button>
+
+	<br><br>
+	
+	<button type="button" class="btn btn-default" id="filebutton">Submit file in Hybrid-Analysis and VirusTotal</button>
+	<button type="button" class="btn btn-default" id="hashbutton">Enter Hash in VirusTotal</button>
+	
+	<br><br>
+	<div id="right">
+	<!----
+		<form id="fileform" class="form-group">
+			<p id="filetitle">Enter a Malicious File: <br> (Hybrid-Analysis, VirusTotal)</p> 
+			<input class="nav-center" type="file" id="enterfile"><br>
+			<button type="button" class="btn btn-default" id="submitfile">Submit File</button>
+			
+		</form>
+	----->
+	
+		<form id="urlform" class="form-group">
+		  <p id="urltitle">Enter an URL: <br> (BrightCloud, Robtex, URLVoid, VirusTotal) </p> 
+		  <input type="text" id="enterurl"><br>
+		  <button type="submit" class="btn btn-default" id="submiturl">Submit an URL</button>
+		</form>
+	</div>
+
+	<div id="left">
+		<form id="ipform" class="form-group">
+		  <p id="iptitle">Enter an IP Address: <br> (BrightCloud, Robtex, VirusTotal) </p> 
+		  <input type="text" id="enterip"><br>
+		  <button type="submit" class="btn btn-default" id="submitip">Submit an IP</button>
+		</form>
+		<!----
+		<form id="hashform" class="form-group">
+		  <p id="iptitle">Enter a hash: <br> (VirusTotal) </p> 
+		  <input type="text" id="enterhash"><br>
+		  <button type="button" class="btn btn-default" id="submithash">Submit a Hash</button>
+		</form>
+		----->
+	</div>
+	
+
+	<!-----
+	<form id="captchaform">
+	  <img id="captchaimage">
+	  <p id="imagetitle">Type the code in the image:</p> 
+	  <input type="text" id="imagecode"><br>
+	  <input type="submit" value="Submit" id="submitimage">
+	  <p id="descriptionparagraph">(BrightCloud requires verification that you are human)</p>  
+	</form>
+	--->
+    
+
+    <p id="status">
+    
+  </body>
+  <footer>
+	<h6 id="footer">Version 1.1</h6>
+  </footer>
+</html>
+
